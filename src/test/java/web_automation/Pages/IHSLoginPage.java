@@ -84,6 +84,9 @@ public class IHSLoginPage extends Base {
     }
 
     public void checkFirstNameStartsWith(String firstName)  {
+        if(firstName.equals("")){
+            System.out.println("Please enter name.");
+        }
         Pattern pattern = Pattern.compile("^[A-E].*");
         Matcher matcher = pattern.matcher(firstName);
         if(matcher.matches()){
@@ -121,9 +124,14 @@ public class IHSLoginPage extends Base {
 
             assertThat(BTN_BACK_EDITOR.isDisplayed()).isTrue();
         }
+        String invalidCase="^[a-z0-9].*";
+        pattern= Pattern.compile(invalidCase);
+        matcher = pattern.matcher(firstName);
+        if(matcher.matches()){
+                System.out.println("Please enter Valid name starting with capital letter.");
+            }
+        }
 
-
-    }
     public String selectPackageName(){
         inputText(TEXT_PACKAGENAME,"NUnit");
         clickElement(MENU_NUNIT);

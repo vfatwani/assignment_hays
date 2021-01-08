@@ -30,6 +30,16 @@ Test 2 (If your first name starts with letter “V-W-X-Y-Z”):
 
 
 
+Case -if the name starts with a-z or 0-7 it prints message
+-----------------------------------------------------------
+* Type your first name "vandana"
 
+Case -if the name starts with 0-9 it prints message
+-----------------------------------------------------------
+* Type your first name "7vandana"
+
+Case -if the name is empty prints message please enter name
+-----------------------------------------------------------
+* Type your first name ""
 
 
